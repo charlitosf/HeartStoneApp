@@ -13,29 +13,29 @@ export class HelloToastComponent {
   async presentToast(text:string) {
     const toast = await this.toastController.create({
       message: text,
-      duration: 2000
+      duration: 2000,
+      position: 'top'
     });
     toast.present();
   }
 
   async presentToastWithOptions() {
     const toast = await this.toastController.create({
-      header: 'Toast header',
-      message: 'Click to Close',
-      position: 'top',
+      header: 'Alert',
+      message: 'Would you like to close the application?',
+      position: 'middle',
       buttons: [
         {
           side: 'start',
-          icon: 'star',
-          text: 'Favorite',
-          handler: () => {
-            console.log('Favorite clicked');
-          }
-        }, {
-          text: 'Done',
+          text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            console.log('Cancel clicked');
+            console.log('Cancelled');
+          }
+        }, {
+          text: 'Exit',
+          handler: () => {
+            new HelloToastComponent(new ToastController()).presentToast("App exited")
           }
         }
       ]

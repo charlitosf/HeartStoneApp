@@ -12,7 +12,7 @@ export class Tab3Page {
   constructor() {}
   
   ionViewWillEnter() {
-    new HelloToastComponent(new ToastController()).presentToast("App exited");
-    navigator['app'].exitApp();
+    new HelloToastComponent(new ToastController()).presentToastWithOptions();
+    //navigator['app'].exitApp();
   }
 }
