@@ -1,3 +1,5 @@
+import { ToastController } from '@ionic/angular';
+import { HelloToastComponent } from './../hello-toast/hello-toast.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +10,9 @@ import { Component } from '@angular/core';
 export class Tab3Page {
 
   constructor() {}
-
+  
+  ionViewWillEnter() {
+    new HelloToastComponent(new ToastController()).presentToast("App exited");
+    navigator['app'].exitApp();
+  }
 }
