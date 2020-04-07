@@ -8,9 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CardDeckComponent implements OnInit {
 
-  @Input() myCardDeck: CardDeck;
+  myCardDeck: CardDeck;
 
-  @Output() clicked = new EventEmitter<string>();
+  //@Output() clicked = new EventEmitter<string>();
 
   clicado: boolean = false;
 
@@ -21,7 +21,7 @@ export class CardDeckComponent implements OnInit {
   click() {
     this.clicado = !this.clicado;
 
-    this.clicked.emit(this.myCardDeck.name);
+    //this.clicked.emit(this.myCardDeck.name);
   }
 
 }

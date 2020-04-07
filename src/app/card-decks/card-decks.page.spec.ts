@@ -10,7 +10,7 @@ describe('CardDecksPage', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardDecksPage ],
+      declarations: [ CardDecksPage, CardDeckComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
