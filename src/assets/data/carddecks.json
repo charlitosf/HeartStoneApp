@@ -2,7 +2,7 @@
     {
         "name": "Druid",
         "image": "Druid.png",
-        "cards" : ["Druidl", "Druid2"]
+        "cards" : ["Druid1", "Druid2"]
     },
     {
         "name": "Mage",
@@ -12,7 +12,7 @@
     {
         "name": "Warrior",
         "image": "Warrior.png",
-        "cards" : ["Warriorl", "Warrior2", "Warrior3"]
+        "cards" : ["Warrior1", "Warrior2", "Warrior3"]
     },
     {
         "name": "Rogue",
