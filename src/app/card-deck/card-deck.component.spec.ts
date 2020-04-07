@@ -1,20 +1,19 @@
-import { CardDeckComponent } from './../card-deck/card-deck.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CardDecksPage } from './card-decks.page';
+import { CardDeckComponent } from './card-deck.component';
 
-describe('CardDecksPage', () => {
-  let component: CardDecksPage;
-  let fixture: ComponentFixture<CardDecksPage>;
+describe('CardDeckComponent', () => {
+  let component: CardDeckComponent;
+  let fixture: ComponentFixture<CardDeckComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardDecksPage ],
+      declarations: [ CardDeckComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CardDecksPage);
+    fixture = TestBed.createComponent(CardDeckComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
