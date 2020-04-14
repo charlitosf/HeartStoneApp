@@ -8,10 +8,8 @@ import { ToastController } from '@ionic/angular';
   selector: 'app-card-decks',
   templateUrl: './card-decks.page.html',
   styleUrls: ['./card-decks.page.scss'],
-  providers: [CardService]
 })
 export class CardDecksPage /*implements OnInit*/ {
-  //readonly cardDecks:string [] = ['Druid', 'Mage', 'Warrior', 'Rogue', 'Shaman'];
   public cardDecks: CardDeck [] = [];
   private readonly ALLOWED_DECKS = ['classes', 'factions', 'qualities', 'types', 'races'];
 
