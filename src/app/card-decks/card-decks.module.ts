@@ -1,3 +1,5 @@
+import { CardService } from './../card.service';
+import { CardListComponent } from './../components/card-list/card-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +17,9 @@ import { CardDecksPage } from './card-decks.page';
     IonicModule,
     CardDecksPageRoutingModule
   ],
-  declarations: [CardDecksPage]
+  /*providers: [
+    CardService
+  ],*/
+  declarations: [CardDecksPage, CardListComponent]
 })
 export class CardDecksPageModule {}
