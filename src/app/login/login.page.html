@@ -33,18 +33,14 @@
   </div>
   <div *ngIf="login">
     <ion-card>
-      <ion-card-title>
-        Login enviado!
-      </ion-card-title>
-      <ion-card-content>
-        <ion-list>
-          <ion-item class="text-info">
-            Email: {{ miForm.value.emailControl }}
-          </ion-item>
-          <ion-item class="text-info">
-            Clave: {{ miForm.value.passwordControl }}
-          </ion-item>
-        </ion-list>
+      <ion-card-header>
+        <ion-card-title>
+          Login enviado!
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content style="color:#75ceff">
+        <b>Email:</b> {{ miForm.value.emailControl }} <br>
+        <b>Clave:</b> {{ miForm.value.passwordControl }}
       </ion-card-content>
     </ion-card>
   </div>
