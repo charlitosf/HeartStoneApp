@@ -11,7 +11,7 @@
         <ion-icon name="mail" item-start></ion-icon>
         Tu correo
       </ion-label>
-      <ion-input color="secondary" type="text" formControlName="emailControl" required></ion-input>
+      <ion-input color="secondary" type="email" formControlName="emailControl" required></ion-input>
     </ion-item>
 
     <ion-item no-padding class="animated fadeInUp">
@@ -21,8 +21,17 @@
       </ion-label>
       <ion-input color="secondary" type="password" formControlName="passwordControl" required></ion-input>
     </ion-item>
-    <p ion-text class="text08" *ngIf="miForm.get('emailControl').touched && miForm.get('emailControl').hasError('required')">
-      <ion-text color="warning">Error</ion-text>
+    <p ion-text class="text08" *ngIf="(miForm.get('emailControl').touched || miForm.get('emailControl').dirty) && miForm.get('emailControl').hasError('required')">
+      <ion-text color="warning">Error - Email is required</ion-text>
+    </p>
+    <p ion-text class="text08" *ngIf="(miForm.get('emailControl').touched || miForm.get('emailControl').dirty) && miForm.get('emailControl').hasError('email')">
+      <ion-text color="warning">Error - Email must be an Email</ion-text>
+    </p>
+    <p ion-text class="text08" *ngIf="(miForm.get('passwordControl').touched || miForm.get('passwordControl').dirty) && miForm.get('passwordControl').hasError('required')">
+      <ion-text color="warning">Error - Password is required</ion-text>
+    </p>
+    <p ion-text class="text08" *ngIf="(miForm.get('passwordControl').touched || miForm.get('passwordControl').dirty) && miForm.get('passwordControl').hasError('minlength')">
+      <ion-text color="warning">Error - Password must be at least 6 characters</ion-text>
     </p>
     <div>
       <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="doLogin()" [disabled]="!miForm.valid" tappable>
