@@ -1,3 +1,5 @@
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -7,6 +9,10 @@ const routes: Routes = [
   {
     path: '',
     component: CardDecksPage
+  },
+  {
+    path: 'card-listing/:cardDeckGroup/:cardDeck',
+    loadChildren: () => import('../card-listing/card-listing.module').then(m => m.CardListingPageModule)
   }
 ];
 
